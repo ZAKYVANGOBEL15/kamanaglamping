@@ -26,7 +26,7 @@ export default function TentSelector({ tents, selectedTentId, onSelectTent, sele
       </div>
 
       {/* Tent Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 gap-4 lg:max-h-[485px] lg:overflow-y-auto lg:pr-1.5 custom-scrollbar">
         {tents.map((tent) => {
           const isSelected = selectedTentId === tent.id;
           return (

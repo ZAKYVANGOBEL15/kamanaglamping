@@ -66,3 +66,18 @@
 .animate-slide-up-fade {
   animation: slideUpFade 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+/* Custom scrollbar for tent selector */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd2c9;
+  border-radius: 2px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #1b3327;
+}
