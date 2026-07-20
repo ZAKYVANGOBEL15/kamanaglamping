@@ -20,7 +20,7 @@ export default function Footer() {
           © 2026 Kamana Glamping. All Rights Reserved.
         </p>
         <div className="flex items-center justify-center gap-6 text-[#cbd2c9]">
-          <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">WhatsApp Concierge</a>
+          <a href="https://wa.me/62895402945495" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">WhatsApp Concierge</a>
         </div>
       </div>
     </footer>
