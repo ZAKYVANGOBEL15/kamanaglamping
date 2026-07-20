@@ -21,6 +21,25 @@ function App() {
   const [notes, setNotes] = useState('');
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [showConfirmationModal, setShowConfirmationModal] = useState(false);
+  const [showStickyBtn, setShowStickyBtn] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight;
+      const winHeight = window.innerHeight;
+      
+      // Show button if scrolled past hero (> 350px) and not yet reached the booking form at the bottom
+      if (scrollY > 350 && (scrollY + winHeight < docHeight - 750)) {
+        setShowStickyBtn(true);
+      } else {
+        setShowStickyBtn(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   
   // Toast Notification State
   const [toast, setToast] = useState(null); // { message: string, type: 'error' | 'success' }
@@ -313,6 +332,27 @@ Mohon informasi ketersediaan slot ini dan instruksi transfer pembayaran DP. Teri
           </button>
         </div>
       )}
+
+      {/* Sticky Bottom Booking Bar (Mobile Only) */}
+      <div className={`fixed bottom-4 left-4 right-4 z-30 transition-all duration-300 transform md:hidden ${
+        showStickyBtn ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0 pointer-events-none'
+      }`}>
+        <div className="bg-[#fcfbf9]/95 backdrop-blur-md border border-[#e7e3da] p-3 rounded-xl shadow-xl flex items-center justify-between">
+          <div>
+            <p className="text-[9px] uppercase tracking-wider text-[#8a7a5f] font-bold">Booking Kamana</p>
+            <p className="font-bold text-[#1b3327] text-xs">{selectedTent.name}</p>
+          </div>
+          <button
+            type="button"
+            onClick={() => {
+              document.getElementById('tent-selector')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="px-4 py-2.5 rounded bg-[#1b3327] hover:bg-[#2c4e3d] text-white text-[10px] font-bold uppercase tracking-wider transition-all shadow-sm active:scale-[0.97]"
+          >
+            Pesan Sekarang
+          </button>
+        </div>
+      </div>
 
     </div>
   );

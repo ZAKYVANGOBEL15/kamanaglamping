@@ -38,9 +38,9 @@ export default function Header() {
         ? 'bg-transparent border-b border-transparent py-2' 
         : 'bg-[#fcfbf9]/95 backdrop-blur-md border-b border-[#e7e3da] py-0 shadow-sm'
     }`}>
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full border border-[#e7e3da] overflow-hidden bg-white shadow-sm shrink-0 flex items-center justify-center">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 h-16 md:h-20 flex items-center justify-between">
+        <div className="flex items-center gap-2 md:gap-3">
+          <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-[#e7e3da] overflow-hidden bg-white shadow-sm shrink-0 flex items-center justify-center">
             <img 
               src="./image/Logo.png" 
               alt="Kamana Logo" 
@@ -48,7 +48,7 @@ export default function Header() {
             />
           </div>
           <div>
-            <span className={`font-sans text-base md:text-lg font-black tracking-wider block transition-colors duration-300 ${
+            <span className={`font-sans text-sm md:text-lg font-black tracking-wider block transition-colors duration-300 ${
               isAtTop ? 'text-white' : 'text-[#1b3327]'
             }`}>
               KAMANA GLAMPING
