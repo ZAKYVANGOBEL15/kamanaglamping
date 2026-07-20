@@ -147,7 +147,7 @@ ${notes ? `*Catatan Tambahan:* ${notes}\n` : ''}
 Mohon informasi ketersediaan slot ini dan instruksi transfer pembayaran DP. Terima kasih!`;
 
     const encodedMessage = encodeURIComponent(messageTemplate);
-    const waUrl = `https://wa.me/62895402945495?text=${encodedMessage}`;
+    const waUrl = `https://wa.me/6285121199518?text=${encodedMessage}`;
     
     // Open WA Link in new tab
     window.open(waUrl, '_blank');

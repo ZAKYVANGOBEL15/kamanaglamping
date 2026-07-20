@@ -61,7 +61,7 @@ export default function Header() {
         }`}>
           <a href="#tent-selector" className={`transition-colors duration-200 ${isAtTop ? 'hover:text-white' : 'hover:text-[#1b3327]'}`}>Tipe Kubah</a>
           <a href="#location-section" className={`transition-colors duration-200 ${isAtTop ? 'hover:text-white' : 'hover:text-[#1b3327]'}`}>Lokasi</a>
-          <a href="https://wa.me/62895402945495" target="_blank" rel="noopener noreferrer" className={`transition-colors duration-200 ${isAtTop ? 'hover:text-white' : 'hover:text-[#1b3327]'}`}>Kontak</a>
+          <a href="https://wa.me/6285121199518" target="_blank" rel="noopener noreferrer" className={`transition-colors duration-200 ${isAtTop ? 'hover:text-white' : 'hover:text-[#1b3327]'}`}>Kontak</a>
         </nav>
       </div>
     </header>
