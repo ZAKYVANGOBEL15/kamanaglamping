@@ -35,7 +35,7 @@ export default function Header() {
       isVisible ? 'translate-y-0' : '-translate-y-full'
     } ${
       isAtTop 
-        ? 'bg-transparent border-b border-transparent py-2' 
+        ? 'bg-[#fcfbf9]/95 md:bg-transparent border-b border-[#e7e3da] md:border-transparent py-2' 
         : 'bg-[#fcfbf9]/95 backdrop-blur-md border-b border-[#e7e3da] py-0 shadow-sm'
     }`}>
       <div className="max-w-7xl mx-auto px-4 md:px-6 h-16 md:h-20 flex items-center justify-between">
@@ -49,7 +49,7 @@ export default function Header() {
           </div>
           <div>
             <span className={`font-sans text-sm md:text-lg font-black tracking-wider block transition-colors duration-300 ${
-              isAtTop ? 'text-white' : 'text-[#1b3327]'
+              isAtTop ? 'text-[#1b3327] md:text-white' : 'text-[#1b3327]'
             }`}>
               KAMANA GLAMPING
             </span>

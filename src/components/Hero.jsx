@@ -2,25 +2,24 @@ import React from 'react';
 
 export default function Hero() {
   return (
-    <section className="relative h-[38vh] min-h-[260px] flex items-center justify-center overflow-hidden border-b border-[#e7e3da]">
+    <section className="relative h-[32vh] min-h-[230px] md:h-[38vh] flex items-center justify-center overflow-hidden border-b border-[#e7e3da]">
       <div className="absolute inset-0 z-0">
         <img 
-          src="./image/banner.png" 
+          src="/image/banner2.jpg" 
           alt="Kamana Glamping Tomohon View" 
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-center blur-[1px] md:blur-[3px] scale-105 transition-all duration-300"
         />
-        {/* Clean vignette gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#fcfbf9] via-[#1b3327]/10 to-[#1b3327]/50"></div>
+        {/* Semi-transparent dark green overlay for high text legibility */}
+        <div className="absolute inset-0 bg-[#1b3327]/35 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#fcfbf9] via-transparent to-transparent z-20"></div>
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center mt-12">
-        
-        <h1 className="font-sans text-2xl md:text-4.5xl font-black text-white leading-tight tracking-tight">
-          Menenun Kedamaian <span className="font-medium text-stone-200">di Kaki Gunung Lokon</span>
+      <div className="relative z-30 max-w-2xl mx-auto px-6 text-center mt-10">
+        <h1 className="font-sans text-xl md:text-3.5xl font-black text-white leading-tight tracking-tight mb-2 md:mb-3">
+          Rencanakan Kunjungan Anda
         </h1>
-
-        <p className="text-xs md:text-sm text-stone-200 max-w-xl mx-auto mt-2.5 font-light">
-          Kabin premium dan kubah eksklusif dengan panorama megah Gunung Lokon.
+        <p className="text-[10px] md:text-sm text-stone-200 max-w-xl mx-auto font-light leading-relaxed">
+          Tentukan tanggal menginap, tentukan tipe tenda impian, dan kirim form reservasi otomatis Anda ke WhatsApp concierge kami.
         </p>
       </div>
     </section>

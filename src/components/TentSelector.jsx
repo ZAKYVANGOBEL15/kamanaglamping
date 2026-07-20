@@ -40,43 +40,43 @@ export default function TentSelector({ tents, selectedTentId, onSelectTent, sele
               }`}
             >
               {/* Thumbnail Area */}
-              <div className="h-32 sm:h-auto sm:w-28 md:w-32 shrink-0 overflow-hidden relative">
+              <div className="h-48 sm:h-auto sm:w-36 md:w-40 shrink-0 overflow-hidden relative">
                 <img 
                   src={tent.image} 
                   alt={tent.name} 
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
                 {/* Category Badge */}
-                <div className="absolute top-2 left-2 bg-[#1b3327]/90 backdrop-blur-xs text-white text-[7px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded shadow-sm">
+                <div className="absolute top-2 left-2 bg-[#1b3327]/90 backdrop-blur-xs text-white text-[7.5px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded shadow-sm">
                   {tent.type}
                 </div>
               </div>
 
               {/* Info Body */}
-              <div className="p-3 flex-1 flex flex-col justify-between space-y-2.5">
+              <div className="p-4 flex-1 flex flex-col justify-between space-y-3">
                 <div>
-                  <div className="flex items-start justify-between gap-2 mb-1">
+                  <div className="flex items-start justify-between gap-2 mb-1.5">
                     <div>
-                      <h4 className="font-sans font-bold text-xs md:text-sm text-[#1b3327] flex items-center gap-1.5">
+                      <h4 className="font-sans font-bold text-sm sm:text-base text-[#1b3327] flex items-center gap-1.5">
                         {tent.name}
                         {isSelected && (
-                          <div className="w-3 h-3 rounded-full bg-[#1b3327] flex items-center justify-center shrink-0">
-                            <Check className="w-2 h-2 text-white stroke-[3]" />
+                          <div className="w-3.5 h-3.5 rounded-full bg-[#1b3327] flex items-center justify-center shrink-0">
+                            <Check className="w-2.5 h-2.5 text-white stroke-[3]" />
                           </div>
                         )}
                       </h4>
                     </div>
                     <div className="text-right shrink-0">
-                      <span className="text-[11px] md:text-xs font-black text-[#1b3327]">{formatRp(tent.price)}</span>
-                      <span className="text-[8px] text-[#5c6e61] block leading-none mt-0.5">/malam</span>
+                      <span className="text-xs sm:text-sm font-black text-[#1b3327]">{formatRp(tent.price)}</span>
+                      <span className="text-[9px] text-[#5c6e61] block leading-none mt-0.5">/malam</span>
                     </div>
                   </div>
-                  <p className="text-[10px] text-[#5c6e61] leading-relaxed line-clamp-2">{tent.tagline}</p>
+                  <p className="text-[11px] sm:text-xs text-[#5c6e61] leading-relaxed line-clamp-2">{tent.tagline}</p>
                 </div>
 
-                <div className="border-t border-[#e7e3da] pt-2 flex items-center justify-between text-[9px] text-[#4a5e51] font-semibold">
-                  <span className="flex items-center gap-1">
-                    <Users className="w-3 h-3 text-[#8a7a5f]" /> {tent.capacity}
+                <div className="border-t border-[#e7e3da] pt-2.5 flex items-center justify-between text-[10px] sm:text-xs text-[#4a5e51] font-semibold">
+                  <span className="flex items-center gap-1.5">
+                    <Users className="w-3.5 h-3.5 text-[#8a7a5f]" /> {tent.capacity}
                   </span>
                   
                   {/* Action Link for Detail Modal */}
@@ -86,9 +86,9 @@ export default function TentSelector({ tents, selectedTentId, onSelectTent, sele
                       e.stopPropagation(); // Prevent selection when clicking detail
                       setDetailModalTent(tent);
                     }}
-                    className="flex items-center gap-1 text-white bg-[#1b3327] hover:bg-[#2c4e3d] transition-colors uppercase tracking-wider font-bold text-[8px] px-2 py-0.5 rounded shadow-sm"
+                    className="flex items-center gap-1.5 text-white bg-[#1b3327] hover:bg-[#2c4e3d] transition-colors uppercase tracking-wider font-bold text-[9px] sm:text-[10px] px-2.5 py-1 rounded shadow-sm"
                   >
-                    <Info className="w-2 h-2" /> Detail
+                    <Info className="w-2.5 h-2.5" /> Detail
                   </button>
                 </div>
               </div>
